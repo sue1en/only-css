@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Voar</title>
+</head>
+<body>
+  <nav class="navegation">
+    <a href="index.html">↩︎ home</a>
+  </nav>
+  <div class="button" onclick="blastOff()">
+    <p>
+      Lançar
+    </p>
+  </div>
+  <div class="flyingBase">
+    <img src="rocket.png" class="rocket"/>
+    <div class="plataform"></div>
+  </div>
+  <style>
+    body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      background-image: linear-gradient(#09233a, #4dd9fb 60%);
+      margin:0;
+    }
+    .navegation{
+      margin:20px 30px;
+      align-self: flex-start;
+      
+    }
+    .navegation a{
+      font-family: 'Segoe UI';
+      text-decoration:none;
+      font-weight: bold;
+      font-size: 16px;
+      color: #ffffff;
+      padding:5px;
+      border-radius: 10px;
+      transition:all .3s ease-out;
+    }
+    .navegation a:hover{
+      cursor: pointer;
+      color:#000000;
+      background-color: rgba(255, 255, 255, 0.35);
+      border-bottom: 3px solid #eeeeee;
+      /* box-shadow:0 0 10px #ff68de; */
+    }
+    .button{
+      background-color:#f34a58;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: solid 2px #000000;
+      transition:all .3s ease-out;
+    }
+    .button p{
+      font-family: 'Segoe UI';
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+      color: #ffffff;
+      text-align: center;
+      padding:20px 0;
+    }
+    .button:hover{
+      cursor: pointer;
+      background-color: #80000b;
+      border: solid 2px #000000;
+      box-shadow:0 0 20px #ffffff;
+    }
+    .flyingBase{
+      align-self: flex-end;
+      margin: 0 100px;
+    }
+    .rocket{
+      transition: transform 3s ease-out;
+      width:60px;
+      padding:0 100px;
+      margin-bottom: 0;
+    }
+    .flying{
+      transform: translateY(-1000px) scale(0.1);
+    }
+    .plataform{
+      background-color: #050e1d;
+      width:260px;
+      height:10px;
+      
+    }
+    </style>
+  <script>
+    function blastOff(){
+      const rocket = document.querySelector('.rocket');
+      rocket.classList.add('flying');
+    }
+  </script>
+</body>
+</html>

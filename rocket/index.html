@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>File One</title>
+</head>
+<body>
+  <h1>Animações CSS</h1>
+  <nav class="navegation">
+    <a href="rocket.html">
+      🚀 Foguete
+    </a>
+    <a href="boat.html">
+      ⛵ Barco
+    </a>
+    <!-- <a href="cars.html">
+      🚗 Carro
+    </a> -->
+  </nav>
+  <style>
+    body{
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      height: 100vh;
+      background-color: #4dd9fb;
+      background-image: linear-gradient(#09233a, #4dd9fb);
+    }
+    h1{
+      font-family: 'Segoe UI';
+      color: #ffffff;
+    }
+    .navegation{
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    .navegation a{
+      font-family: 'Segoe UI';
+      text-decoration:none;
+      font-weight: bold;
+      font-size: 18px;
+      color: #ffffff;
+      text-align: center;
+      background-color:#861e70;
+      padding:15px 20px;
+      margin: 20px;
+      border-radius: 10px;
+      border-bottom:3px solid #d63cb5;
+      transition:all .3s ease-out;
+    }
+    .navegation a:hover{
+      cursor: pointer;
+      background-color: #d63cb5;
+      border-bottom: 3px solid #861e70;
+      box-shadow:0 0 10px #ff68de;
+    }
+    </style>
+</body>
+</html>
